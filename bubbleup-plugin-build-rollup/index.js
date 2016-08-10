@@ -67,7 +67,3 @@ function toCamelCase (str) {
     // Removes spaces
     .replace(/ /g, '')
 }
-
-function getFilename (str) {
-  return str.split('/').filter(x => x.length > 0)[-1]
-}
