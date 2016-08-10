@@ -21,7 +21,7 @@ module.exports = {
       ? options.distBuild
       : path.join(cwd, 'dist', getFilename(entryFile))
 
-    const destinationName = toCamelCase(path.basename(cwd))
+    const destinationName = toCamelCase(path.dirname(cwd))
 
     const writeOptions = {
       dest: destination,
