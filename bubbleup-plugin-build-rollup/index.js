@@ -19,14 +19,15 @@ module.exports = {
     // defaults
     const destination = options.distBuild
       ? options.distBuild
-      : path.join(cwd, 'dist', path.basename(entryFile))
+      : path.join(cwd, 'dist', getFilename(entryFile))
 
-    const destinationName = toCamelCase(path.dirname(cwd))
+    const destinationName = toCamelCase(path.basename(cwd))
 
     const writeOptions = {
       dest: destination,
       format: 'es',
       moduleName: destinationName,
+      moduleId: destinationName,
       sourceMap: true,
       sourceMapFile: path.join(destination, '.map')
     }
@@ -65,4 +66,8 @@ function toCamelCase (str) {
     .replace(/ (.)/g, function ($1) { return $1.toUpperCase() })
     // Removes spaces
     .replace(/ /g, '')
+}
+
+function getFilename (str) {
+  return str.split('/').filter(x => x.length > 0)[-1]
 }
