@@ -23,8 +23,6 @@ module.exports = {
 
     const destinationName = toCamelCase(path.basename(cwd))
 
-    console.log(destinationName)
-
     const writeOptions = {
       dest: destination,
       format: 'es',
