@@ -38,7 +38,7 @@
     }
   },
   "dependencies": {
-    "bubbleup": "0.0.2",
+    "bubbleup": "^0.0.2",
     "rollup": "^0.34.7"
   },
   "devDependencies": {
