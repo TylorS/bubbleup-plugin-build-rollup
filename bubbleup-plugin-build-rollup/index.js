@@ -47,8 +47,6 @@ module.exports = {
       }
     })
 
-    console.log(rollupOptions)
-
     rollup.rollup(rollupOptions).then(function (bundle) {
       bundle.write(writeOptions)
     })
