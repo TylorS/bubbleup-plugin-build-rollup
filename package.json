@@ -1,6 +1,6 @@
 {
   "name": "bubbleup-plugin-build-rollup",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Rollup plugin for bubbleup",
   "main": "bubbleup-plugin-build-rollup/index.js",
   "scripts": {
