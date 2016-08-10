@@ -34,7 +34,7 @@ module.exports = {
     // use custom plugins path if specified
     const pluginsPath = options.parent.pluginsPath
       ? path.join(cwd, options.parent.pluginsPath)
-      : getNodeModulesPath(cwd)
+      : bubbleup.getNodeModulesPath(cwd)
 
     const pluginNames = bubbleup.findPluginsByPrefix(pluginsPath, ROLLUP_PREFIX)
 
@@ -55,16 +55,16 @@ module.exports = {
   }
 }
 
-function toCamelCase(str) {
+function toCamelCase (str) {
   // Lower cases the string
   return str.toLowerCase()
-    // Replaces any - or _ characters with a space 
-    .replace( /[-_]+/g, ' ')
-    // Removes any non alphanumeric characters 
-    .replace( /[^\w\s]/g, '')
-    // Uppercases the first character in each group immediately following a space 
-    // (delimited by spaces) 
-    .replace( / (.)/g, function($1) { return $1.toUpperCase(); })
-    // Removes spaces 
-    .replace( / /g, '' );
+    // Replaces any - or _ characters with a space
+    .replace(/[-_]+/g, ' ')
+    // Removes any non alphanumeric characters
+    .replace(/[^\w\s]/g, '')
+    // Uppercases the first character in each group immediately following a space
+    // (delimited by spaces)
+    .replace(/ (.)/g, function ($1) { return $1.toUpperCase() })
+    // Removes spaces
+    .replace(/ /g, '')
 }
