@@ -1,3 +1,13 @@
+<a name="0.0.4"></a>
+## [0.0.4](https://github.com/TylorS/bubbleup-plugin-build-rollup/compare/v0.0.3...v0.0.4) (2016-08-10)
+
+
+### Bug Fixes
+
+* **index:** fix moduleName error ([8e8eb5a](https://github.com/TylorS/bubbleup-plugin-build-rollup/commit/8e8eb5a))
+
+
+
 <a name="0.0.3"></a>
 ## [0.0.3](https://github.com/TylorS/bubbleup-plugin-build-rollup/compare/v0.0.2...v0.0.3) (2016-08-10)
 
