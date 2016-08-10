@@ -19,7 +19,7 @@ module.exports = {
     // defaults
     const destination = options.distBuild
       ? options.distBuild
-      : path.join(cwd, 'dist', getFilename(entryFile))
+      : path.join(cwd, 'dist', path.basename(path.join(cwd, entryFile)))
 
     const destinationName = toCamelCase(path.dirname(cwd))
 
